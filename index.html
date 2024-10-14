@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shivanand Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%; /* Ensure full height */
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #001f3f; /* Dark Blue Background */
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Background Animation */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, rgba(255, 110, 64, 0.1), rgba(255, 105, 180, 0.1));
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .name-container {
+            text-align: center;
+            padding: 50px 0;
+            color: #fff;
+            background: linear-gradient(to right, #ff4b2b, #ff416c);
+            border-bottom-left-radius: 50% 20%;
+            border-bottom-right-radius: 50% 20%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow */
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+        }
+
+        .name-container img {
+            border-radius: 50%; /* Make the image circular */
+            width: 80px; /* Set width */
+            height: 80px; /* Set height */
+            margin-right: 20px; /* Space between image and text */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow */
+        }
+
+        .name-container h1 {
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Text shadow */
+        }
+
+        .name-container p {
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: #333;
+        }
+
+        header nav ul {
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Flexbox layout for sections */
+        .horizontal-layout {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap; /* Allow wrapping for responsiveness */
+            gap: 20px; /* Space between items */
+            padding: 20px;
+            height: 100%; /* Full height for the layout */
+        }
+
+        /* Section styling */
+        .section {
+            flex: 1; /* Allow equal growth */
+            min-width: 280px; /* Minimum width for responsive behavior */
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Different colors for each section */
+        .about-section {
+            background-color: #ff6f61; /* Coral Red */
+        }
+
+        .skills-section {
+            background-color: #4b88a2; /* Soft Blue */
+        }
+
+        .projects-section {
+            background-color: #f9a825; /* Yellow Gold */
+        }
+
+        /* Image styling */
+        .section-image {
+            border-radius: 10px;
+            width: 100%; /* Make images responsive */
+            max-width: 300px; /* Keep maximum width for images */
+            height: auto; /* Maintain aspect ratio */
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow to images */
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .horizontal-layout {
+                flex-direction: column; /* Stack vertically on small screens */
+            }
+            .name-container h1 {
+                font-size: 36px;
+            }
+            .name-container p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div> <!-- Background Animation -->
+
+    <!-- Header -->
+    <header>
+        <div class="name-container">
+            <img src="pngwing.png" alt="Shivanand"> <!-- Replace with your image path -->
+            <div>
+                <h1>Shivanand Mall</h1>
+                <p>Web Developer | Software Tester</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Horizontal Layout for Sections -->
+    <div class="horizontal-layout">
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <h2>About</h2>
+            <img src="about.png" alt="About Me" class="section-image"/>
+            <p>Hello! I'm Shivanand Mall, a passionate Web Developer and Software Tester specializing in Java and front-end technologies. I love creating efficient and scalable solutions to enhance user experiences.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <h2>Skills</h2>
+            <img src="skill.png" alt="Skills" class="section-image"/>
+            <ul>
+                <li><strong>Languages:</strong> Java</li>
+                <li><strong>Frameworks:</strong> HTML, CSS, JavaScript</li>
+                <li><strong>Tools/Platforms:</strong> MySQL, Selenium,SOAP UI,Git</li>
+                <li><strong>Soft Skills:</strong> Adaptability, Teamwork</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <h2>Projects</h2>
+            <img src="project.png" alt="Projects" class="section-image"/>
+            <div class="project">
+                <h3>Point Of Sales Management System</h3>
+                <p><strong>Domain:</strong> System Application | <strong>Language:</strong> Java,SQL</p>
+                <p><strong>Objective:</strong>  The primary objective was to develop and optimize a simple POS management system that
+                    helps organizations track records related to employees, inventory, and customers. The project aimed to
+                    apply academic learning to solve real-world problems in business management.
+                    </p>
+                <p><strong>Outcome:</strong> : Successfully built a fully functional POS management application that facilitates employee
+                    authentication, checkout processes, customer management, and inventory tracking. The system allowed
+                    for efficient business operations through real-time tracking of sales, inventory, and employee activities</p>
+            </div>
+                    </section>
+    </div>
+
+    <!-- Footer / Contact -->
+    <footer id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mail to: Mallshiva988@gmail.com">Mallshiva988@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/shivanand mall-17a343142/">linkedin.com/in/shivanand mall-17a343142/</a></p>
+        <p>GitHub: <a href=" https://github.com/shivanandmall">github.com/shivanandmall</a></p>
+    </footer>
+</body>
+</html>
